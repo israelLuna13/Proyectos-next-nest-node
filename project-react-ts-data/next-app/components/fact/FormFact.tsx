@@ -1,10 +1,10 @@
 "use client";
-import { Companys, draftFact, Locations, Salarys } from "@/schemas/schema";
+import { Company, draftFact, Location, Salary } from "@/schemas/schema";
 import { useFormContext } from "react-hook-form";
 type FormFactProps = {
-  salarys: Salarys;
-  companys: Companys;
-  locations: Locations
+  salarys: Salary[];
+  companys: Company[];
+  locations: Location[]
 };
 
 export default function FormFact({ salarys, companys ,locations}: FormFactProps) {
@@ -90,7 +90,7 @@ export default function FormFact({ salarys, companys ,locations}: FormFactProps)
           })}
         >
           <option value="">-- Select salary --</option>
-          {salarys.data.map((salary) => (
+          {salarys.map((salary) => (
             <option value={salary.salary_id} key={salary.salary_id}>
               ${salary.salary_min} - ${salary.salary_max}
             </option>
@@ -113,7 +113,7 @@ export default function FormFact({ salarys, companys ,locations}: FormFactProps)
           })}
         >
           <option value="">-- Select company --</option>
-          {companys.data.map((company) => (
+          {companys.map((company) => (
             <option value={company.company_id} key={company.company_id}>
               {company.industry}
             </option>
@@ -138,7 +138,7 @@ export default function FormFact({ salarys, companys ,locations}: FormFactProps)
           })}
         >
           <option value="">-- Select Location --</option>
-          {locations.data.map((location) => (
+          {locations.map((location) => (
             <option value={location.location_id} key={location.location_id}>
               {location.state}
             </option>
