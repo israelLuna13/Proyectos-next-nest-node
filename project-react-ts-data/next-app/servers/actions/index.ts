@@ -2,7 +2,7 @@
 import { draftFact } from "@/schemas/schema";
 
 export  async function createFact(data:draftFact){
-    const url = `${process.env.API_URL}/api/fact/create-fact`
+    const url = `${process.env.API_URL}/fact`
     console.log(url);
     
     const req = await fetch(url,{

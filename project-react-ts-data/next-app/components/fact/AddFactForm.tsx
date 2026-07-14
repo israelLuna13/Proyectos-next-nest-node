@@ -4,10 +4,12 @@ import {createFact} from "@/servers/actions";
 import {  useForm,FormProvider } from "react-hook-form"
 export default function AddFactForm({children}:{children:React.ReactNode}) {
  const methods = useForm<draftFact>();
+ const {reset} = useForm<draftFact>();
 
   const onSubmit =async  (data: draftFact) => {
     try {
       const res =await createFact(data)
+      reset()
       console.log(res);
       
       

@@ -3,7 +3,7 @@ import { getSalary } from "@/servers/get"
 import Heading from "@/UI/Heading";
 import Pagination from "@/UI/Pagination";
 import { isValidPage } from "@/utils/utils";
-import { notFound, redirect } from "next/navigation"
+import { redirect } from "next/navigation"
 
 type SearchParams= Promise<{page:string}>
 export  default async function page({searchParams}:{searchParams:SearchParams}) {
@@ -22,13 +22,10 @@ export  default async function page({searchParams}:{searchParams:SearchParams}) 
   //       console.log(error);
   //       notFound()
   //   }
-   const {salary,total} = await getSalary(dataPerPage,skip)
-   console.log(salary);
+  const {salary,total} = await getSalary(dataPerPage,skip)
         
   const totalPages = Math.ceil(total / dataPerPage);
-    
-  console.log(totalPages);
-  
+      
   return (
     <>
     <Heading> Salarys</Heading>

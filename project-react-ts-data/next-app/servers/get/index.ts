@@ -25,7 +25,7 @@ const result = SalarysSchema.safeParse(json)
 }
 
 export async function getLocation(take:number, skip:number){
-const url = `${process.env.API_URL}/location`
+const url = `${process.env.API_URL}/location?take=${take}&skip=${skip}`
 const req = await fetch(url)
 
 if(!req.ok){
@@ -47,7 +47,7 @@ console.log(result);
 }
 
 export async function getCompany(take:number, skip:number){
-const url = `${process.env.API_URL}/company`
+const url = `${process.env.API_URL}/company?take=${take}&skip=${skip}`
 const req = await fetch(url)
 
 if(!req.ok){
