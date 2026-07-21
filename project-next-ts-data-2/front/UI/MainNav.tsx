@@ -14,12 +14,6 @@ export default function MainNav() {
             Link
           </Link>
       </nav>
-      <Link
-        href={"/admin/sales/"}
-        className=" bg-green-500 font-bold my-3 px-10 py-2"
-      >
-        Panel Administrator
-      </Link>
     </header>
   );
 }

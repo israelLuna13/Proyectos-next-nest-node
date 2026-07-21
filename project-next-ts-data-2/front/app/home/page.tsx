@@ -6,29 +6,29 @@ export default function Home() {
          const sections = [
     {
       title: "Customers",
-      description: "All products",
-      href: "/data/customer",
-      icon:Users
-      
-    },
-    {
-      title: "Salarys",
-      description: "All Countrys",
-      href: "/data/salary",
-      icon:Users
-      
-    },
-    {
-      title: "Location",
       description: "All Customers",
-      href: "/data/location",
+      href: "/data/customers",
+      icon:Users
+      
+    },
+    {
+      title: "Categorys",
+      description: "All Categorys",
+      href: "/data/categorys",
+      icon:Users
+      
+    },
+    {
+      title: "Facts",
+      description: "All Facts",
+      href: "/data/facts",
       icon:Users
       
     },
         {
-      title: "Fact",
-      description: "",
-      href: "/data/fact",
+      title: "Payments",
+      description: "All Payments",
+      href: "/data/payments",
       icon:Users
       
     }
